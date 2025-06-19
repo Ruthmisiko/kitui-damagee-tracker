@@ -815,17 +815,14 @@ body {
     margin-top: 15px;
     font-size: 14px;
 }
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    margin-right: 20px;
-    cursor: pointer;
-}
 
 .nav-toggle {
+    display: none;
+}
+.menu-toggle {
+    display: none;
+}
+.drawer-close {
     display: none;
 }
 /* Responsive Design */
