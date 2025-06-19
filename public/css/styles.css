@@ -822,9 +822,7 @@ body {
 .menu-toggle {
     display: none;
 }
-.drawer-close {
-    display: none;
-}
+
 /* Responsive Design */
 
 
@@ -888,6 +886,7 @@ body {
         color: white;
         font-size: 1.8rem;
         cursor: pointer;
+        display: block;
     }
 
     .nav-toggle {
