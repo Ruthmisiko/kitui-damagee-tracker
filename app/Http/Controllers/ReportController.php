@@ -1,5 +1,7 @@
 <?php
 
+<?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,7 +13,7 @@ class ReportController extends Controller
     public function index(Request $request)
     {
         $start = $request->input('start_date', now()->subDays(30)->toDateString());
-        $end = $request->input('end_date', now()->toDateString());
+        $end = $request->input('end_date', now()->toDateString()) . ' 23:59:59'; // ✅ include full day
 
         $issues = Issue::where('user_id', auth()->id())
                     ->whereBetween('created_at', [$start, $end])
@@ -30,9 +32,11 @@ class ReportController extends Controller
     public function adminIndex(Request $request)
     {
         $start = $request->input('start_date', now()->subDays(30)->toDateString());
-        $end = $request->input('end_date', now()->toDateString());
+        $end = $request->input('end_date', now()->toDateString()) . ' 23:59:59'; // ✅ include full day
 
-        $issues = Issue::whereBetween('created_at', [$start, $end])->get();
+        $issues = Issue::with('user') // include reporter info
+                    ->whereBetween('created_at', [$start, $end])
+                    ->get();
 
         $summary = [
             'total' => $issues->count(),
@@ -43,4 +47,3 @@ class ReportController extends Controller
         return view('admin-report', compact('issues', 'summary', 'start', 'end'));
     }
 }
-
