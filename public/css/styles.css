@@ -822,7 +822,9 @@ body {
 .menu-toggle {
     display: none;
 }
-
+.drawer-close {
+    display: none;
+}
 /* Responsive Design */
 
 
@@ -879,14 +881,13 @@ body {
         padding: 10px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-
     .drawer-close {
+        display: block;
         background: none;
         border: none;
         color: white;
         font-size: 1.8rem;
         cursor: pointer;
-        display: block;
     }
 
     .nav-toggle {
