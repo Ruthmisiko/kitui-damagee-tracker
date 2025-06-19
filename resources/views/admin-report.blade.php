@@ -142,7 +142,7 @@ table tbody tr:nth-child(even) {
             <div class="content-box">
             <h2>Generate Report</h2>
 
-        <form method="GET" action="{{ route('reports.index') }}">
+        <form method="GET" action="{{ route('reports.admin') }}">
             <label>Start Date:</label>
             <input type="date" name="start_date" value="{{ $start }}">
             <label>End Date:</label>
