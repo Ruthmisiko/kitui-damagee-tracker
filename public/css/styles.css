@@ -815,6 +815,16 @@ body {
     margin-top: 15px;
     font-size: 14px;
 }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
 
 /* Responsive Design */
 
@@ -822,49 +832,65 @@ body {
 
   /* Responsive Design */
   @media (max-width: 768px) {
-    .dashboard-container {
-        flex-direction: column;
-        padding-top: 60px;
+
+    .menu-toggle {
+        display: block;
     }
 
     .side-nav {
-        width: 100%;
-        height: auto;
-        position: relative;
-        top: auto;
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #e55a00;
+        transition: left 0.3s ease-in-out;
+        z-index: 9999;
+        overflow-y: auto;
+    }
+
+    .side-nav.open {
+        left: 0;
     }
 
     .main-content {
-        margin-left: 0;
-        padding: 20px;
+        margin-left: 0 !important;
     }
 
-    .side-nav .logo img {
-        max-width: 150px;
+    .dashboard-container {
+        flex-direction: column;
     }
 
-    .side-nav nav {
-        padding: 10px 0;
-    }
-
-    .side-nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .side-nav nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     .side-nav li {
-        margin: 5px;
+        width: 100%;
     }
 
     .side-nav a {
-        padding: 10px 15px;
-        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+    }
+    .drawer-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .side-nav a:hover {
-        padding-left: 15px;
+    .drawer-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
     }
+
     nav {
       flex-direction: column;
       gap: 1rem;

@@ -12,17 +12,27 @@
   <!-- Navbar -->
   <nav>
     <div class="logo"><b>KITUI DAMAGE TRACKER</b></div>
+       <!-- Hamburger icon for mobile -->
+       <button class="menu-toggle" onclick="toggleSideNav()">
+        <ion-icon name="menu-outline"></ion-icon>
+    </button>
     <ul>
-    <li><a href="{{ url('/') }}">Home</a></li>
-      <li><a href="{{ url('/') }}" class="btn">Logout</a></li>
+    <!-- <li><a href="{{ url('/') }}">Home</a></li> -->
+
     </ul>
   </nav>
         <!-- Side Navigation -->
-        <div class="side-nav">
+        <div class="side-nav" id="mobileDrawer">
+             <!-- Close Button -->
+            <div class="drawer-header">
+                <button class="drawer-close" onclick="toggleSideNav()">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
             <div class="logo">
             <img src="images/kituilogo.jpg" alt="Kitui County Logo" class="form-logo">
             </div>
-            <nav2>
+            <nav2 class="side-links">
                 <ul>
                 @if(Auth::user()->user_type === 'admin')
                     <li><a href="{{ route('issues.admin') }}"><ion-icon name="eye-outline"></ion-icon>View Issues</a></li>
@@ -45,6 +55,12 @@
                 </ul>
             </nav2>
         </div>
+        <script>
+            function toggleSideNav() {
+                const drawer = document.getElementById('mobileDrawer');
+                drawer.classList.toggle('open');
+            }
+        </script>
 
 </body>
 </html>
