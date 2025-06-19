@@ -13,7 +13,10 @@
   <!-- Navbar -->
   <nav>
     <div class="logo"><b>KITUI DAMAGE TRACKER</b></div>
-    <ul>
+    <button class="nav-toggle" onclick="toggleMainMenu()">
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+    <ul id="mainMenu">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#faqs">FAQs</a></li>
@@ -139,6 +142,12 @@
     </div>
   </div>
 </footer>
+<script>
+  function toggleMainMenu() {
+    const menu = document.getElementById('mainMenu');
+    menu.classList.toggle('open');
+  }
+</script>
 
 </body>
 </html>
