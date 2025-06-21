@@ -5,134 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Kitui Damage Tracker</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-  <style>
-    /* === REPORT PAGE STYLING === */
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-form label {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-input[type="date"] {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #fff;
-    transition: border-color 0.3s ease-in-out;
-}
-
-input[type="date"]:focus {
-    outline: none;
-    border-color: #f60; /* Kitui County theme color */
-    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
-}
-
-button[type="submit"] {
-    padding: 8px 16px;
-    background-color: #f60;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #e55b00;
-}
-
-/* === SUMMARY STYLING === */
-.summary-section h3,
-.summary-section h4 {
-    margin-top: 20px;
-}
-
-.summary-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 0;
-}
-
-/* === TABLE STYLING === */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    font-size: 14px;
-}
-
-table thead {
-    background-color: #f60;
-    color: white;
-}
-
-table th,
-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* === MOBILE RESPONSIVENESS === */
-@media screen and (max-width: 768px) {
-    form {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-        width: 100%;
-    }
-
-    thead {
-        display: none;
-    }
-
-    tbody tr {
-        margin-bottom: 15px;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 10px;
-    }
-
-    tbody td {
-        position: relative;
-        padding-left: 50%;
-        text-align: left;
-    }
-
-    tbody td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 15px;
-        top: 12px;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-}
-
-  </style>
 </head>
 <body>
    <div class="dashboard-container">
@@ -147,7 +20,7 @@ table tbody tr:nth-child(even) {
             <input type="date" name="start_date" value="{{ $start }}">
             <label>End Date:</label>
             <input type="date" name="end_date" value="{{ $end }}">
-            <button type="submit">Filter</button>
+            <button type="submit" style="background-color:#d64500; color:white;border:none;">Filter</button>
         </form>
 
         <hr>

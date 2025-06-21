@@ -30,7 +30,12 @@
   <section class="hero">
     <h1>Report Infrastructure Damage in Kitui County</h1>
     <p>Help improve your community by reporting broken roads, bridges, and utilities.</p>
-    <button><a href="{{ route('issue.create') }}">Report Issue Now</a> </button>
+    @auth
+    <button><a href="{{ route('issue.create') }}">Report Issue Now</a></button>
+    @else
+    <button onclick="alert('Login first to report an issue'); window.location.href='{{ route('login') }}';">Report Issue Now</button>
+    @endauth
+
   </section>
 
  <!-- About Section -->

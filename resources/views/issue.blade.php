@@ -99,6 +99,10 @@
           <label for="location_details">Location Details <span class="required">*</span></label>
           <input type="text" id="location_details" name="location_details" required>
         </div>
+        <!-- <div class="form-group">
+        <label for="photo">Upload a Photo (optional)</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+        </div> -->
         <button type="submit" class="btn">Submit</button>
       </form>
     </div>

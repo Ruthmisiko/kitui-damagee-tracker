@@ -17,7 +17,6 @@
         <ion-icon name="menu-outline"></ion-icon>
     </button>
     <ul>
-    <!-- <li><a href="{{ url('/') }}">Home</a></li> -->
     </ul>
   </nav>
         <!-- Side Navigation -->
@@ -29,7 +28,7 @@
                 </button>
             </div>
             <div class="logo">
-            <img src="images/kituilogo.jpg" alt="Kitui County Logo" class="form-logo">
+            <img src="{{ asset('images/kituilogo.jpg') }}" alt="Kitui County Logo" class="form-logo">
             </div>
             <nav2 class="side-links">
                 <ul>
@@ -45,7 +44,7 @@
                     <a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" style="background:none;border:none;color:inherit;padding:0;cursor:pointer;">
+                        <button type="submit" style="background:none;border:none;color:inherit;padding:0;cursor:pointer; font-weight: bolder;font-size:0.97rem">
                             <ion-icon name="log-out-outline"></ion-icon> Log Out
                         </button>
                     </form>
