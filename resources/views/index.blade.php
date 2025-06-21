@@ -134,9 +134,7 @@
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
       </ul>
-      <div class="footer-contact">
-        <p>Contact: info@kituidamagetracker.org | +254 712 345 678</p>
-      </div>
+
       <div class="footer-social">
         <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
         <a href="#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>

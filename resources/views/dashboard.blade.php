@@ -16,7 +16,7 @@
         <!-- Main Content -->
         <div class="main-content">
             <div class="content-box">
-                <h1>Welcome to Your Dashboard</h1>
+                <h1>Welcome {{ Auth::user()->name }} to Your Dashboard</h1>
                 <p>You are logged in!</p>
             </div>
 
